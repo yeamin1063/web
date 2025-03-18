@@ -1,0 +1,167 @@
+/* Reset some default styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Verdana", sans-serif;
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #eef2f3; /* Light blue-gray background */
+}
+
+/* Header Section */
+header {
+  text-align: center;
+  padding: 25px;
+  background-color: #1E90FF; /* Dodger Blue */
+  color: white;
+  flex-shrink: 0;
+}
+
+.header-image {
+  max-width: 8%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Top Menu Bar Below Header */
+.top-menu-bar {
+  background-color: #222; /* Black background */
+  color: white;
+  padding: 12px;
+  flex-shrink: 0;
+}
+
+.top-menu-bar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.top-menu-bar ul li {
+  padding: 8px 20px;
+}
+
+.top-menu-bar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.top-menu-bar ul li a:hover {
+  color: #FFD700; /* Gold color on hover */
+  text-decoration: underline;
+}
+
+/* Container for Sidebar and Content */
+.container {
+  display: flex;
+  flex: 1;
+  margin: 25px 0;
+}
+
+/* Sidebar (30%) */
+.sidebar {
+  flex: 30%;
+  background-color: #222;
+  color: white;
+  padding: 25px;
+  min-width: 220px;
+  text-align: center;
+}
+
+.sidebar-image {
+  max-width: 60%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+
+.sidebar h3 {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #FFD700; /* Gold */
+}
+
+/* Content (70%) */
+.content {
+  flex: 70%;
+  padding: 25px;
+  overflow-y: auto;
+  background-color: #ffffff;
+}
+
+.content h2 {
+  color: #1E90FF;
+  margin-bottom: 25px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+}
+
+table th {
+  background-color: #1E90FF;
+  color: white;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #f0f8ff; /* Light blue */
+}
+
+table tr:hover {
+  background-color: #dcdcdc; /* Gray hover effect */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  background-color: #222;
+  color: white;
+  flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+
+  .sidebar {
+      flex: 100%;
+      padding: 15px;
+  }
+
+  .content {
+      flex: 100%;
+  }
+
+  .top-menu-bar ul {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .top-menu-bar ul li {
+      margin: 10px 0;
+  }
+}
